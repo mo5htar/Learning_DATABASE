@@ -1,0 +1,17 @@
+version: "3.1"
+services:
+  db:
+    image: mysql
+    restart: always
+    volumes:
+      - mysql_db:/var/lib/mysql
+    ports:
+      - 8080:8080
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_password
+      - MYSQL_DATABASE=LearningMYSQL
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=example
+
+volumes:
+  mysql_db:
